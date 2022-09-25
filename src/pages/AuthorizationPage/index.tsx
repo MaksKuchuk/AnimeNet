@@ -4,13 +4,36 @@ import Btn from "../../UI/Btn";
 import pngwing from "../../assets/img/pngwing.png";
 import Modal from "../../UI/Modal";
 import { useSelector } from "react-redux";
-import { selectRegisterVisible } from "../../redux/modals/selectors";
-import { setRegisterVisible } from "../../redux/modals/slice";
+import {
+  selectRegisterStage,
+  selectRegisterVisible,
+} from "../../redux/modals/selectors";
+import { setRegisterStage, setRegisterVisible } from "../../redux/modals/slice";
 import { useAppDispatch } from "../../redux/store";
+import Register from "../../components/Register";
+import VerifyNumber from "../../components/VerifyNumber";
 
 const AuthorizationPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const registerVisible = useSelector(selectRegisterVisible);
+  const registerStage = useSelector(selectRegisterStage);
+
+  const chooseRegisterStage = () => {
+    if (registerStage === "enternumber") {
+      return <Register />;
+    } else if (registerStage === "verifynumber") {
+      return <VerifyNumber />;
+    } else if (registerStage === "namepass") {
+      return <></>;
+    } else if (registerStage === "success") {
+      return <></>;
+    }
+  };
+
+  const openModal = () => {
+    dispatch(setRegisterStage("enternumber"));
+    dispatch(setRegisterVisible(true));
+  };
 
   return (
     <div className={classes.content}>
@@ -20,10 +43,7 @@ const AuthorizationPage: React.FC = () => {
           Social network for all lovers of anime. You can share your emotions
           and have a good time.
         </span>
-        <Btn
-          onClick={() => dispatch(setRegisterVisible(true))}
-          styles={classes.btn}
-        >
+        <Btn onClick={openModal} styles={classes.btn}>
           Create a profile
         </Btn>
       </div>
@@ -35,7 +55,7 @@ const AuthorizationPage: React.FC = () => {
         setVisible={(b) => dispatch(setRegisterVisible(b))}
         styles={classes.modalstyles}
       >
-        a
+        {chooseRegisterStage()}
       </Modal>
     </div>
   );

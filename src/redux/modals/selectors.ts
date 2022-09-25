@@ -5,3 +5,6 @@ export const selectSignInVisible = (state: RootState) =>
 
 export const selectRegisterVisible = (state: RootState) =>
   state.modals.registerVisible;
+
+export const selectRegisterStage = (state: RootState) =>
+  state.modals.registerStage;

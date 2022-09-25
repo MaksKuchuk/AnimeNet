@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IModalsSlice } from "./types";
+import { IModalsSlice, IRegisterStage } from "./types";
 
 const initialState: IModalsSlice = {
   signInVisible: false,
   registerVisible: false,
+  registerStage: "enternumber",
 };
 
 const modalsSlice = createSlice({
@@ -16,9 +17,13 @@ const modalsSlice = createSlice({
     setRegisterVisible(state, action: PayloadAction<boolean>) {
       state.registerVisible = action.payload;
     },
+    setRegisterStage(state, action: PayloadAction<IRegisterStage>) {
+      state.registerStage = action.payload;
+    },
   },
 });
 
-export const { setSignInVisible, setRegisterVisible } = modalsSlice.actions;
+export const { setSignInVisible, setRegisterVisible, setRegisterStage } =
+  modalsSlice.actions;
 
 export default modalsSlice.reducer;
