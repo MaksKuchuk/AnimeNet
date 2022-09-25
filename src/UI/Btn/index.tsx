@@ -1,18 +1,15 @@
-import { hrtime } from "process";
 import React from "react";
 import classes from "./Btn.module.scss";
 
 type IBtnProps = {
   children: string;
-  width: number;
-  height: number;
-  fz: number;
+  styles: any;
 };
 
-const Btn: React.FC<IBtnProps> = ({ fz, width, height, children }) => {
+const Btn: React.FC<IBtnProps> = ({ styles, children }) => {
   return (
-    <button style={{ width, height }} className={classes.btn}>
-      <span style={{ lineHeight: fz, fontSize: fz }}>{children}</span>
+    <button className={`${classes.btn} ${styles}`}>
+      <span>{children}</span>
     </button>
   );
 };
