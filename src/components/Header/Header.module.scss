@@ -60,3 +60,11 @@ $logoC: #ff3737b2;
     height: 40px;
   }
 }
+
+$bgcModal: #333333;
+.modalstyles {
+  background-color: $bgcModal;
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+}

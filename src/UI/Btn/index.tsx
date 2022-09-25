@@ -3,12 +3,13 @@ import classes from "./Btn.module.scss";
 
 type IBtnProps = {
   children: string;
-  styles: any;
+  styles: StyleSheet;
+  onClick: () => void;
 };
 
-const Btn: React.FC<IBtnProps> = ({ styles, children }) => {
+const Btn: React.FC<IBtnProps> = ({ styles, children, onClick }) => {
   return (
-    <button className={`${classes.btn} ${styles}`}>
+    <button onClick={onClick} className={`${classes.btn} ${styles}`}>
       <span>{children}</span>
     </button>
   );

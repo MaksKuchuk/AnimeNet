@@ -44,3 +44,11 @@ $fzbtn: 32px;
   line-height: $fzbtn;
   font-size: $fzbtn;
 }
+
+$bgcModal: #333333;
+.modalstyles {
+  background-color: $bgcModal;
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+}
