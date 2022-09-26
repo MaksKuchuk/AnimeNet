@@ -13,11 +13,14 @@ const VerifyNumber: React.FC = () => {
 
   return (
     <div className={classes.container}>
-      <span className={classes.title}>Verify phone number</span>
-      <span className={classes.subtitle}>
-        We sent an SMS with a code to the number
-      </span>
-      <span className={classes.number}>+7 123 456-78-90</span>
+      <div className={classes.title}>
+        <span>Verify phone number</span>
+      </div>
+      <div className={classes.subtitle}>
+        <span>We sent an SMS with a code to the number</span>
+        <span className={classes.number}>+7 123 456-78-90</span>
+      </div>
+
       <input
         className={classes.inp}
         type="tel"

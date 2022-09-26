@@ -13,8 +13,6 @@ const Header: React.FC = () => {
   const dispatch = useAppDispatch();
   const signInVisible = useSelector(selectSignInVisible);
 
-  console.log(signInVisible);
-
   return (
     <div className={classes.header}>
       <div className={classes.content}>

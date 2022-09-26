@@ -13,10 +13,12 @@ const Register: React.FC = () => {
 
   return (
     <div className={classes.container}>
-      <span className={classes.title}>Enter phone number</span>
-      <span className={classes.subtitle}>
-        Your phone number will be used to log into your account
-      </span>
+      <div className={classes.title}>
+        <span>Enter phone number</span>
+      </div>
+      <div className={classes.subtitle}>
+        <span>Your phone number will be used to log into your account</span>
+      </div>
       <input
         className={classes.inp}
         type="tel"

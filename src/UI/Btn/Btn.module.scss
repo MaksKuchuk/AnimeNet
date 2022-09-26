@@ -1,12 +1,13 @@
-$bgc: #ff3f41;
+$bgcdis: #ff202372;
+$bgcact: #ff3f41;
 $bgchover: #ce3234;
 $shadowC: #ff202372;
 
 .btn {
-  background-color: $bgc;
+  background-color: $bgcdis;
   border-radius: 1000px;
   box-shadow: 0 3px 15px $shadowC;
-  transition: 0.1s;
+  cursor: default;
 
   span {
     display: block;
@@ -15,6 +16,12 @@ $shadowC: #ff202372;
     text-align: center;
     color: #fff;
   }
+}
+
+.active {
+  background-color: $bgcact;
+  transition: 0.1s;
+  cursor: pointer;
 
   &:hover {
     background-color: $bgchover;
