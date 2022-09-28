@@ -1,0 +1,54 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  &__reg {
+    width: 430px;
+    padding: 20px;
+
+    $fzh1: 57px;
+    .h1txt {
+      color: #fff;
+      line-height: $fzh1;
+      font-size: $fzh1;
+      margin-bottom: 15px;
+    }
+
+    $fzspan: 18px;
+    .spantxt {
+      display: block;
+      color: #757575;
+      line-height: calc($fzspan + 5px);
+      font-size: $fzspan;
+      margin-bottom: 60px;
+    }
+  }
+
+  $imgsize: 550px;
+  img {
+    position: absolute;
+    width: $imgsize;
+    bottom: 0;
+    right: calc(0px + (700px - $imgsize) / 2);
+    z-index: 10;
+  }
+}
+
+$fzbtn: 32px;
+.btn {
+  width: 260px;
+  height: 60px;
+  line-height: $fzbtn;
+  font-size: $fzbtn;
+}
+
+$bgcModal: #333333;
+.modalstyles {
+  background-color: $bgcModal;
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+}

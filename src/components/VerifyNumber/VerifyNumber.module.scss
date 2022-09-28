@@ -1,0 +1,118 @@
+$titlesize: 60px;
+$subtitlesize: 80px;
+$inpsize: 45px;
+$btnsize: 50px;
+$btnmartop: 30px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+$fztitle: 32px;
+$lineC: #8a8a8a;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: $titlesize;
+  border-bottom: 1px solid $lineC;
+
+  span {
+    text-align: center;
+    color: #fff;
+    font-size: $fztitle;
+    line-height: $fztitle;
+    height: $fztitle;
+  }
+}
+
+$fzbotspan: 16px;
+$textC: #868686;
+.subtitle {
+  display: flex;
+  //justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 8px 0;
+  height: $subtitlesize;
+
+  span {
+    text-align: center;
+    color: $textC;
+    font-size: $fzbotspan;
+    line-height: $fzbotspan;
+    padding: 3px;
+  }
+
+  $fznumber: 16px;
+  .number {
+    font-size: $fznumber;
+    color: #fff;
+  }
+}
+
+.block {
+  flex-grow: 1;
+}
+
+$fzinp: 20px;
+$inpC: #4d4d4d;
+$inpBorC: #888888;
+$textC: #6d6d6d;
+.inp {
+  width: 300px;
+  height: $inpsize;
+  padding: 0 10px;
+
+  color: #fff;
+  background-color: $inpC;
+  border-radius: 10px;
+  border: 1px solid $inpBorC;
+
+  font-size: $fzinp;
+
+  &::placeholder {
+    color: $textC;
+  }
+}
+
+$fzbtn: 36px;
+.btn {
+  width: 250px;
+  height: $btnsize;
+  line-height: $fzbtn;
+  font-size: $fzbtn;
+
+  margin-top: $btnmartop;
+}
+
+$fzbotspan: 14px;
+$fzbotactspan: 20px;
+$textC: #868686;
+$textactC: #ff6868;
+.bottomspan {
+  width: 100%;
+  color: $textC;
+  font-size: $fzbotspan;
+  padding: 10px;
+  text-align: center;
+
+  span {
+    margin-left: 5px;
+    color: $textC;
+    font-size: $fzbotspan;
+  }
+
+  .activespan {
+    color: $textactC;
+    font-size: $fzbotactspan;
+  }
+}

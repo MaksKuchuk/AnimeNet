@@ -8,6 +8,8 @@ const AuthorizationLayout: React.FC = () => {
     <div className={classes.wrapper}>
       <Header />
       <div className={classes.content}>
+        <div className={`${classes.shadow} ${classes.shadow1}`}></div>
+        <div className={`${classes.shadow} ${classes.shadow2}`}></div>
         <Outlet />
       </div>
     </div>

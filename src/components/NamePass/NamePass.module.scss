@@ -1,0 +1,99 @@
+$titlesize: 60px;
+$subtitlesize: 80px;
+$inpsize: 45px;
+$btnsize: 50px;
+$btnmartop: 30px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+$fztitle: 32px;
+$lineC: #8a8a8a;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: $titlesize;
+  border-bottom: 1px solid $lineC;
+
+  span {
+    text-align: center;
+    color: #fff;
+    font-size: $fztitle;
+    line-height: $fztitle;
+    height: $fztitle;
+  }
+}
+
+$fzinp: 20px;
+$inpC: #4d4d4d;
+$inpBorC: #888888;
+$textC: #6d6d6d;
+$inpmartop: 17px;
+.inp {
+  width: 300px;
+  height: $inpsize;
+  padding: 0 10px;
+
+  color: #fff;
+  background-color: $inpC;
+  border-radius: 10px;
+  border: 1px solid $inpBorC;
+
+  font-size: $fzinp;
+
+  &1 {
+    margin-top: $inpmartop + 1px;
+  }
+
+  &2 {
+    margin-top: $inpmartop;
+  }
+
+  &::placeholder {
+    color: $textC;
+  }
+}
+
+$fzbtn: 36px;
+.btn {
+  width: 250px;
+  height: $btnsize;
+  line-height: $fzbtn;
+  font-size: $fzbtn;
+
+  margin-top: $btnmartop;
+}
+
+.block {
+  flex-grow: 1;
+}
+
+$fzexp: 15px;
+$successC: #7cff82;
+$wrongC: #ff6868;
+.expression {
+  padding: 0px 0 15px 0;
+
+  span {
+    display: block;
+    font-size: $fzexp;
+    line-height: $fzexp;
+  }
+
+  .success {
+    color: $successC;
+  }
+
+  .wrong {
+    color: $wrongC;
+  }
+}

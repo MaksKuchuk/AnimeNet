@@ -1,0 +1,77 @@
+$titlesize: 60px;
+$subtitlesize: 150px;
+$inpsize: 45px;
+$btnsize: 50px;
+$btnmartop: 5px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+$fztitle: 32px;
+$lineC: #8a8a8a;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: $titlesize;
+  border-bottom: 1px solid $lineC;
+
+  span {
+    text-align: center;
+    color: #fff;
+    font-size: $fztitle;
+    line-height: $fztitle;
+    height: $fztitle;
+  }
+}
+
+$fzbotspan: 28px;
+$textC: #7cff82;
+.subtitle {
+  display: flex;
+  justify-content: center;
+
+  width: 95%;
+  padding: 18px 0;
+  height: $subtitlesize;
+
+  span {
+    text-align: center;
+    color: $textC;
+    font-size: $fzbotspan;
+    line-height: $fzbotspan;
+    padding: 3px;
+  }
+}
+
+$fzbtn: 36px;
+.btn {
+  width: 250px;
+  height: $btnsize;
+  line-height: $fzbtn;
+  font-size: $fzbtn;
+
+  margin-top: $btnmartop;
+}
+
+.block {
+  flex-grow: 1;
+}
+
+$fzbotspan: 14px;
+$textC: #868686;
+.bottomspan {
+  width: 100%;
+  color: $textC;
+  font-size: $fzbotspan;
+  padding: 10px;
+  text-align: center;
+}
