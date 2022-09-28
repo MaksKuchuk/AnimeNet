@@ -27,7 +27,11 @@ const NamePass: React.FC = () => {
         className={`${classes.inp} ${classes.inp2}`}
         type="password"
       />
-      <Btn onActive={true} onClick={nextRegistrationStage} styles={classes.btn}>
+      <Btn
+        onActive={isBtnActive || true}
+        onClick={nextRegistrationStage}
+        styles={classes.btn}
+      >
         Continue
       </Btn>
       <div className={classes.block}></div>

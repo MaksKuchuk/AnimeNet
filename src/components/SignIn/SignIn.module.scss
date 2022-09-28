@@ -1,34 +1,47 @@
+$titlesize: 60px;
+$subtitlesize: 80px;
+$inpsize: 45px;
+$btnsize: 50px;
+$btnmartop: 30px;
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: 0 auto;
 }
 
-$fztitle: 40px;
+$fztitle: 32px;
 $lineC: #8a8a8a;
 .title {
-  display: block;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  color: #fff;
-  font-size: $fztitle;
+  width: 100%;
+  height: $titlesize;
   border-bottom: 1px solid $lineC;
+
+  span {
+    text-align: center;
+    color: #fff;
+    font-size: $fztitle;
+    line-height: $fztitle;
+    height: $fztitle;
+  }
 }
 
 $fzinp: 20px;
 $inpC: #4d4d4d;
 $inpBorC: #888888;
 $textC: #6d6d6d;
+$inpmartop: 17px;
 .inp {
   width: 300px;
-  height: 45px;
+  height: $inpsize;
   padding: 0 10px;
-  margin-bottom: 23px;
 
   color: #fff;
   background-color: $inpC;
@@ -37,36 +50,46 @@ $textC: #6d6d6d;
 
   font-size: $fzinp;
 
+  &1 {
+    margin-top: $inpmartop + 1px;
+  }
+
+  &2 {
+    margin-top: $inpmartop;
+  }
+
   &::placeholder {
     color: $textC;
   }
 }
 
-$fzbotspan: 16px;
-$fzbotactspan: 20px;
-$textC: #868686;
-$textactC: #ff6868;
-.bottomspan {
-  color: $textC;
-  font-size: $fzbotspan;
-  padding: 10px;
+$fzbtn: 36px;
+.btn {
+  width: 250px;
+  height: $btnsize;
+  line-height: $fzbtn;
+  font-size: $fzbtn;
 
-  span {
-    color: $textactC;
-    font-size: $fzbotactspan;
-    margin-left: 5px;
-  }
+  margin-top: $btnmartop;
 }
 
 .block {
   flex-grow: 1;
 }
 
-$fzbtn: 36px;
-.btn {
-  margin: 0px;
-  width: 250px;
-  height: 50px;
-  line-height: $fzbtn;
-  font-size: $fzbtn;
+$fzbotspan: 14px;
+$fzclick: 22px;
+$textclickC: #ff6868;
+$textC: #868686;
+.bottomspan {
+  width: 100%;
+  color: $textC;
+  font-size: $fzbotspan;
+  padding: 10px;
+  text-align: center;
+
+  span {
+    color: $textclickC;
+    font-size: $fzclick;
+  }
 }

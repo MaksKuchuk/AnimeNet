@@ -13,6 +13,7 @@ import { useAppDispatch } from "../../redux/store";
 import Register from "../../components/Register";
 import VerifyNumber from "../../components/VerifyNumber";
 import NamePass from "../../components/NamePass";
+import RegistrationSuccess from "../../components/RegistrationSucccess";
 
 const AuthorizationPage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -27,7 +28,7 @@ const AuthorizationPage: React.FC = () => {
     } else if (registerStage === "namepass") {
       return <NamePass />;
     } else if (registerStage === "success") {
-      return <></>;
+      return <RegistrationSuccess />;
     }
   };
 

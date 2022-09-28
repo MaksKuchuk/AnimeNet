@@ -5,23 +5,25 @@ import classes from "./SignIn.module.scss";
 
 const SignIn: React.FC = () => (
   <div className={classes.container}>
-    <span className={classes.title}>Sign in</span>
+    <div className={classes.title}>
+      <span>Sign in</span>
+    </div>
     <input
-      className={classes.inp}
-      type="text"
       placeholder="Enter phone number"
+      className={`${classes.inp} ${classes.inp1}`}
+      type="text"
     />
     <input
-      className={classes.inp}
-      type="password"
       placeholder="Enter password"
+      className={`${classes.inp} ${classes.inp2}`}
+      type="password"
     />
-    <Btn onClick={() => null} styles={classes.btn}>
+    <Btn onActive={true} onClick={() => {}} styles={classes.btn}>
       Continue
     </Btn>
     <div className={classes.block}></div>
     <span className={classes.bottomspan}>
-      Forgot your password?
+      Forgot your password?{" "}
       <Link to="/forgetpassword">
         <span>Click here</span>
       </Link>
