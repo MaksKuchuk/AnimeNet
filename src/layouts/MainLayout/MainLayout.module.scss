@@ -2,4 +2,38 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+//$circleC: #ff202372;
+$circleC: #ff202325;
+$size1: 350px;
+$size2: 700px;
+
+.shadow {
+  z-index: 1;
+  position: absolute;
+  background-color: $circleC;
+  border-radius: 50%;
+
+  &1 {
+    top: calc(70px - $size1 / 2);
+    left: calc(0px - $size1 / 2);
+
+    filter: blur(1000px);
+
+    width: $size1;
+    height: $size1;
+  }
+  &2 {
+    right: 0px;
+    bottom: calc(0px - $size2 / 2);
+
+    filter: blur(1000px);
+
+    width: $size2;
+    height: $size2;
+  }
 }
