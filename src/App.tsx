@@ -11,13 +11,13 @@ const App: React.FC = () => {
       <Route path="" element={<AuthorizationLayout />}>
         <Route path="" element={<AuthorizationPage />} />
       </Route>
-      <Route path="usr/" element={<MainLayout />}>
-        <Route path="mypage" element={<MainPage />} />
-        <Route path="messanger" element={<MainPage />} />
-        <Route path="friends" element={<MainPage />} />
-        <Route path="branches" element={<MainPage />} />
-        <Route path="anime" element={<MainPage />} />
-        <Route path="help" element={<MainPage />} />
+      <Route path="usr/:str" element={<MainLayout />}>
+        <Route path="mypage/" element={<MainPage />} />
+        <Route path="messanger/" element={<MainPage />} />
+        <Route path="friends/" element={<MainPage />} />
+        <Route path="branches/" element={<MainPage />} />
+        <Route path="anime/" element={<MainPage />} />
+        <Route path="help/" element={<MainPage />} />
       </Route>
 
       <Route path="*" element={<>Page not found</>} />

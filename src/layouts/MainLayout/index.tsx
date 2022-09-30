@@ -12,7 +12,9 @@ const MainLayout: React.FC = () => {
         <div className={`${classes.shadow} ${classes.shadow1}`}></div>
         <div className={`${classes.shadow} ${classes.shadow2}`}></div>
         <NavBar />
-        <Outlet />
+        <div className={classes.mainpage}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );
