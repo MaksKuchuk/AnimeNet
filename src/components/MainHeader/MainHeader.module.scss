@@ -27,11 +27,13 @@ $logoC: #ff3737b2;
     flex-direction: row;
   }
 
+  $logoSize: 60px;
   &__logo {
-    width: 60px;
-    height: 60px;
+    width: $logoSize;
+    height: $logoSize;
     background-color: $logoC;
     border-radius: 15px;
+    user-select: none;
 
     span {
       display: block;
@@ -59,6 +61,32 @@ $logoC: #ff3737b2;
     width: 200px;
     height: 40px;
   }
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  $iconC: #ff6a6a;
+  $iconSize: 35px;
+  $marginr: 15px;
+  &__icon {
+    fill: $iconC;
+    width: $iconSize;
+    height: $iconSize;
+    cursor: pointer;
+
+    margin-right: $marginr;
+  }
+}
+
+$notifC: #868686;
+$marginrnot: 60px;
+.notif {
+  fill: #868686;
+  margin-right: $marginrnot;
 }
 
 $bgcModal: #333333;

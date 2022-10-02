@@ -1,0 +1,24 @@
+$size: 55px;
+$marginl: 10px;
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  width: $size;
+  height: $size;
+  margin-left: $marginl;
+  border-radius: 50%;
+  background-color: #fff;
+
+  $fz: 32px;
+  span {
+    margin: auto;
+
+    text-transform: uppercase;
+    font-size: $fz;
+    color: #fff;
+  }
+}

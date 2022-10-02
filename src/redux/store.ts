@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import modals from "./modals/slice";
+import profile from "./profile/slice";
 
 export const store = configureStore({
   reducer: {
     modals,
+    profile,
   },
 });
 
