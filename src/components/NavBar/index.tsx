@@ -7,28 +7,41 @@ import { ReactComponent as friendssvg } from "../../assets/img/icons/friends.svg
 import { ReactComponent as branchessvg } from "../../assets/img/icons/branches.svg";
 import { ReactComponent as animesvg } from "../../assets/img/icons/anime.svg";
 import { ReactComponent as helpsvg } from "../../assets/img/icons/help.svg";
+import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   return (
     <div className={classes.container}>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={mypagesvg}>
-        My page
-      </IconBtn>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={messengersvg}>
-        Messanger
-      </IconBtn>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={friendssvg}>
-        Friends
-      </IconBtn>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={branchessvg}>
-        Branches
-      </IconBtn>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={animesvg}>
-        Anime
-      </IconBtn>
-      <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={helpsvg}>
-        Help
-      </IconBtn>
+      <Link to="/usr/mypage">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={mypagesvg}>
+          My page
+        </IconBtn>
+      </Link>
+      <Link to="/usr/messenger">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={messengersvg}>
+          Messenger
+        </IconBtn>
+      </Link>
+      <Link to="/usr/friends">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={friendssvg}>
+          Friends
+        </IconBtn>
+      </Link>
+      <Link to="/usr/branches">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={branchessvg}>
+          Branches
+        </IconBtn>
+      </Link>
+      <Link to="/usr/anime">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={animesvg}>
+          Anime
+        </IconBtn>
+      </Link>
+      <Link to="/usr/help">
+        <IconBtn styles={classes.btn} onClick={() => {}} SvgElem={helpsvg}>
+          Help
+        </IconBtn>
+      </Link>
     </div>
   );
 };

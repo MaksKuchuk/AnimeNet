@@ -3,7 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import AuthorizationLayout from "./layouts/AuthorizationLayout";
 import AuthorizationPage from "./pages/AuthorizationPage";
-import MainPage from "./pages/MainPage";
+import MypagePage from "./pages/MypagePage";
+import MessengerPage from "./pages/MessengerPage";
+import FriendsPage from "./pages/FriendsPage";
+import BranchesPage from "./pages/BranchesPage";
+import AnimePage from "./pages/AnimePage";
+import HelpPage from "./pages/HelpPage";
 
 const App: React.FC = () => {
   return (
@@ -11,13 +16,13 @@ const App: React.FC = () => {
       <Route path="" element={<AuthorizationLayout />}>
         <Route path="" element={<AuthorizationPage />} />
       </Route>
-      <Route path="usr/:str" element={<MainLayout />}>
-        <Route path="mypage/" element={<MainPage />} />
-        <Route path="messanger/" element={<MainPage />} />
-        <Route path="friends/" element={<MainPage />} />
-        <Route path="branches/" element={<MainPage />} />
-        <Route path="anime/" element={<MainPage />} />
-        <Route path="help/" element={<MainPage />} />
+      <Route path="usr" element={<MainLayout />}>
+        <Route path="mypage" element={<MypagePage />} />
+        <Route path="messenger" element={<MessengerPage />} />
+        <Route path="friends" element={<FriendsPage />} />
+        <Route path="branches" element={<BranchesPage />} />
+        <Route path="anime" element={<AnimePage />} />
+        <Route path="help" element={<HelpPage />} />
       </Route>
 
       <Route path="*" element={<>Page not found</>} />

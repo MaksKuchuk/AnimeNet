@@ -1,5 +1,5 @@
-$padtop: 30px;
-$btnmartop: 20px;
+$padtop: 0px;
+$btnmarbottom: 20px;
 $wid: 250px;
 
 .container {
@@ -14,5 +14,5 @@ $wid: 250px;
 $btnC: #ff6a6a;
 .btn {
   width: 100%;
-  margin-top: $btnmartop;
+  margin-bottom: $btnmarbottom;
 }

@@ -1,4 +1,5 @@
 $bgc: #222222;
+$headerHeight: 70px;
 
 .wrapper {
   width: 100vw;
@@ -6,15 +7,18 @@ $bgc: #222222;
   background-color: $bgc;
 }
 
+$paggingtopbottom: 30px;
 .content {
   display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: auto;
-  height: 100%;
+  margin: 0 auto;
+  width: 80%;
+
+  padding: $paggingtopbottom;
+  height: calc(100vh - $headerHeight);
 }
 
 .mainpage {
+  z-index: 20;
   flex-grow: 1;
 }
 
