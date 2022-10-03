@@ -1,0 +1,18 @@
+$padtop: 0px;
+$btnmarbottom: 20px;
+$wid: 250px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: $wid;
+  padding-top: $padtop;
+
+  z-index: 10;
+}
+
+$btnC: #ff6a6a;
+.btn {
+  width: 100%;
+  margin-bottom: $btnmarbottom;
+}

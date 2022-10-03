@@ -32,6 +32,7 @@ $logoC: #ff3737b2;
     height: 60px;
     background-color: $logoC;
     border-radius: 15px;
+    user-select: none;
 
     span {
       display: block;

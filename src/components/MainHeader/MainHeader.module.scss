@@ -1,0 +1,98 @@
+$bgc: #333333;
+$strokeC: #ff6a6a;
+$logoC: #ff3737b2;
+
+.header {
+  position: relative;
+
+  width: 100%;
+  height: 70px;
+  background-color: $bgc;
+  border-bottom: 1px solid #ff6a6a;
+
+  z-index: 100;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  &__logoblock {
+    display: flex;
+    flex-direction: row;
+  }
+
+  $logoSize: 60px;
+  &__logo {
+    width: $logoSize;
+    height: $logoSize;
+    background-color: $logoC;
+    border-radius: 15px;
+    user-select: none;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      line-height: 50px;
+      text-align: center;
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+
+  &__name {
+    margin: 0 30px;
+    line-height: 60px;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  $fz: 28px;
+  &__btn {
+    line-height: calc($fz + 5px);
+    font-size: $fz;
+    width: 200px;
+    height: 40px;
+  }
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  $iconC: #ff6a6a;
+  $iconSize: 35px;
+  $marginr: 15px;
+  &__icon {
+    fill: $iconC;
+    width: $iconSize;
+    height: $iconSize;
+    cursor: pointer;
+
+    margin-right: $marginr;
+  }
+}
+
+$notifC: #868686;
+$marginrnot: 60px;
+.notif {
+  fill: #868686;
+  margin-right: $marginrnot;
+}
+
+$bgcModal: #333333;
+.modalstyles {
+  background-color: $bgcModal;
+  border-radius: 15px;
+  width: 400px;
+  height: 450px;
+}

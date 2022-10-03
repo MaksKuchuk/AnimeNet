@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+
+  $size: 40px;
+  $mright: 15px;
+
+  height: $size;
+  $fillC: #ff6a6a;
+
+  .btn {
+    display: flex;
+  }
+
+  .svg * {
+    fill: $fillC;
+    color: $fillC;
+  }
+
+  .svgblock {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    margin-right: $mright;
+  }
+
+  $fz: 22px;
+  span {
+    color: #fff;
+    font-size: $fz;
+  }
+
+  .spanblock {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

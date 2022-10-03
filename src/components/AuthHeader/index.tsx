@@ -4,12 +4,12 @@ import { useAppDispatch } from "../../redux/store";
 import Btn from "../../UI/Btn";
 import Modal from "../../UI/Modal";
 import SignIn from "../SignIn";
-import classes from "./Header.module.scss";
+import classes from "./AuthHeader.module.scss";
 import { setSignInVisible } from "../../redux/modals/slice";
 import { selectSignInVisible } from "../../redux/modals/selectors";
 import { useSelector } from "react-redux";
 
-const Header: React.FC = () => {
+const AuthHeader: React.FC = () => {
   const dispatch = useAppDispatch();
   const signInVisible = useSelector(selectSignInVisible);
 
@@ -42,4 +42,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default AuthHeader;
