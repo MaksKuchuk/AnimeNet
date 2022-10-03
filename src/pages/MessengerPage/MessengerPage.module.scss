@@ -1,0 +1,54 @@
+$chatWidtn: 700px;
+$chatC: #333333;
+$chatBorderC: #ff6a6a;
+$borderR: 15px;
+.container {
+  width: $chatWidtn;
+  height: 100%;
+
+  min-width: $chatWidtn;
+
+  border: 1px solid $chatBorderC;
+  border-radius: $borderR;
+
+  background-color: $chatC;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid $chatBorderC;
+
+  $svgC: #868686;
+  &__svg {
+    fill: $svgC;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  input {
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    padding-right: 20px;
+
+    &::placeholder {
+      color: $svgC;
+    }
+  }
+}
+
+.chatList {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
