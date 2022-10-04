@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Color, IProfileSlice } from "./types";
+import { Color } from "../globalTypes";
+import { IProfileSlice } from "./types";
 
 const initialState: IProfileSlice = {
   isAuth: true,
