@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import classes from "./MessengerPage.module.scss";
 import { ReactComponent as FindSvg } from "../../assets/img/icons/find.svg";
 import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { selectPeople } from "../../redux/messagePeople/selectors";
 import { IMessagePerson } from "../../redux/messagePeople/types";
 import ChatListPerson from "../../components/ChatListPerson";
 
-const MessengerPage = () => {
+const MessengerPage: React.FC = () => {
   const people = useSelector(selectPeople);
 
   return (

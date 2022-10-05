@@ -8,7 +8,7 @@ const initialState: IProfileSlice = {
   photoColor: "#6565FF",
   name: "Fredddi Vazovsky",
   description:
-    "It is my favourite phrase from anime doctor stoune. I think I am not a stone. But I am not sure.",
+    "It is my favourite phrase from anime doctor stone. I think I am not a stone. But I am not sure.",
 };
 
 const profileSlice = createSlice({

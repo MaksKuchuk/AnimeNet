@@ -20,17 +20,21 @@ $chatC: #333333;
   height: 100%;
   margin-left: 10px;
 
+  cursor: pointer;
+
   $spanC: #fff;
   $spanfz: 18px;
   span {
     position: relative;
+    display: block;
+
     color: $spanC;
     font-size: $spanfz;
 
     white-space: nowrap;
     overflow: hidden;
 
-    &after {
+    &:after {
       content: "";
       position: absolute;
       top: 0;

@@ -9,6 +9,7 @@ import FriendsPage from "./pages/FriendsPage";
 import BranchesPage from "./pages/BranchesPage";
 import AnimePage from "./pages/AnimePage";
 import HelpPage from "./pages/HelpPage";
+import ChatPage from "./pages/ChatPage";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <Route path="usr" element={<MainLayout />}>
         <Route path="mypage" element={<MypagePage />} />
         <Route path="messenger" element={<MessengerPage />} />
+        <Route path="messenger/:id" element={<ChatPage />} />
         <Route path="friends" element={<FriendsPage />} />
         <Route path="branches" element={<BranchesPage />} />
         <Route path="anime" element={<AnimePage />} />
