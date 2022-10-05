@@ -1,0 +1,113 @@
+$chatWidtn: 700px;
+$chatC: #333333;
+$chatBorderC: #ff6a6a;
+$borderR: 15px;
+.container {
+  width: $chatWidtn;
+  height: 100%;
+
+  min-width: $chatWidtn;
+
+  border: 1px solid $chatBorderC;
+  border-radius: $borderR;
+
+  background-color: $chatC;
+
+  display: flex;
+  flex-direction: column;
+}
+
+$paddingInfolr: 15px;
+.personInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 $paddingInfolr;
+
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid $chatBorderC;
+}
+
+$svgSize: 40px;
+$svgC: #868686;
+.backsvg {
+  width: $svgSize;
+  height: $svgSize;
+  fill: $svgC;
+
+  cursor: pointer;
+}
+
+.namestatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  $namefz: 18px;
+  &__name {
+    font-size: $namefz;
+    color: #fff;
+  }
+
+  $statusfz: 14px;
+  $statusC: #868686;
+  &__status {
+    font-size: $statusfz;
+    color: $statusC;
+  }
+}
+
+.messages {
+  height: 100%;
+  width: 100%;
+
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid $chatBorderC;
+
+  $inputH: 40px;
+  $inputBC: #868686;
+  $inputPlaceholderC: #868686;
+  $inputBorderR: 5px;
+  $inputMarginl: 15px;
+  $inputfz: 20px;
+  input {
+    height: $inputH;
+    border: 1px solid $inputBC;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: $inputBorderR;
+    margin-left: $inputMarginl;
+    flex-grow: 1;
+    font-size: $inputfz;
+
+    &::placeholder {
+      color: $inputPlaceholderC;
+    }
+  }
+
+  $svgSendSize: 40px;
+  $svgSendC: #868686;
+  $marginsvg: 15px;
+  &__svg {
+    width: $svgSendSize;
+    height: $svgSendSize;
+    fill: $svgSendC;
+    margin: 0 $marginsvg;
+    cursor: pointer;
+  }
+}

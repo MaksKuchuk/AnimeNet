@@ -1,4 +1,4 @@
-export type Color = `#${string}`;
+import { Color } from "../globalTypes";
 
 export type IProfileSlice = {
   isAuth: boolean;
