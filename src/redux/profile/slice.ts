@@ -4,9 +4,10 @@ import { IProfileSlice } from "./types";
 
 const initialState: IProfileSlice = {
   isAuth: true,
-  isPhoto: false,
-  photoColor: "#6565FF",
+  id: "1",
+  defaultColor: "#6565FF",
   name: "Fredddi Vazovsky",
+  photoURL: "",
   description:
     "It is my favourite phrase from anime doctor stone. I think I am not a stone. But I am not sure.",
 };
@@ -18,11 +19,11 @@ const profileSlice = createSlice({
     setAuth(state, action: PayloadAction<boolean>) {
       state.isAuth = action.payload;
     },
-    setPhoto(state, action: PayloadAction<boolean>) {
-      state.isPhoto = action.payload;
+    setPhotoURL(state, action: PayloadAction<string>) {
+      state.photoURL = action.payload;
     },
     setPhotoColor(state, action: PayloadAction<Color>) {
-      state.photoColor = action.payload;
+      state.defaultColor = action.payload;
     },
     setName(state, action: PayloadAction<string>) {
       state.name = action.payload;
@@ -33,7 +34,7 @@ const profileSlice = createSlice({
   },
 });
 
-export const { setAuth, setPhoto, setPhotoColor, setName, setDescription } =
+export const { setAuth, setPhotoURL, setPhotoColor, setName, setDescription } =
   profileSlice.actions;
 
 export default profileSlice.reducer;

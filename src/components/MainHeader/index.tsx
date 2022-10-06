@@ -1,7 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectIsPhoto } from "../../redux/profile/selectors";
+import {
+  selectDefaultColor,
+  selectName,
+  selectPhotoURL,
+} from "../../redux/profile/selectors";
 import UserPhoto from "../UserPhoto";
 import classes from "./MainHeader.module.scss";
 import { ReactComponent as Notification } from "../../assets/img/icons/notification.svg";
@@ -10,7 +14,9 @@ import { ReactComponent as Theme } from "../../assets/img/icons/idea.svg";
 import { ReactComponent as Logout } from "../../assets/img/icons/logout.svg";
 
 const MainHeader: React.FC = () => {
-  const isPhoto = useSelector(selectIsPhoto);
+  const name = useSelector(selectName);
+  const defaultColor = useSelector(selectDefaultColor);
+  const photoURL = useSelector(selectPhotoURL);
 
   return (
     <div className={classes.header}>
@@ -31,7 +37,7 @@ const MainHeader: React.FC = () => {
           <Settings className={classes.menuBtn__icon} />
           {/*<Logout className={classes.menuBtn__icon} />*/}
         </div>
-        {isPhoto ? <></> : <UserPhoto />}
+        <UserPhoto user={{ id: "-", name, defaultColor, photoURL }} size={55} />
       </div>
     </div>
   );

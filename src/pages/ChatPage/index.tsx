@@ -4,8 +4,8 @@ import { ReactComponent as Backsvg } from "../../assets/img/icons/back.svg";
 import { ReactComponent as Sendsvg } from "../../assets/img/icons/send.svg";
 import { useSelector } from "react-redux";
 import { selectCompanion } from "../../redux/companion/selectors";
-import CompanionPhoto from "../../components/CompanionPhoto";
 import { useNavigate } from "react-router";
+import UserPhoto from "../../components/UserPhoto";
 
 const ChatPage: React.FC = () => {
   const companion = useSelector(selectCompanion);
@@ -23,7 +23,15 @@ const ChatPage: React.FC = () => {
           <span className={classes.namestatus__name}>{companion.name}</span>
           <span className={classes.namestatus__status}>{status}</span>
         </div>
-        <CompanionPhoto size={40} />
+        <UserPhoto
+          user={{
+            id: "-",
+            name: companion.name,
+            defaultColor: companion.defaultColor,
+            photoURL: companion.photoURL,
+          }}
+          size={40}
+        />
       </div>
       <div className={classes.messages}></div>
       <div className={classes.input}>

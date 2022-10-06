@@ -1,9 +1,10 @@
 import { Color } from "../globalTypes";
 
 export type IProfileSlice = {
+  id: string;
   isAuth: boolean;
-  isPhoto: boolean;
-  photoColor: Color;
+  defaultColor: Color;
   name: string;
   description: string;
+  photoURL: string;
 };

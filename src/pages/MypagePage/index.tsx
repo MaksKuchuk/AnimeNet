@@ -1,19 +1,29 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import UserPhoto from "../../components/UserPhoto";
-import { selectDescription, selectName } from "../../redux/profile/selectors";
+import {
+  selectDefaultColor,
+  selectDescription,
+  selectName,
+  selectPhotoURL,
+} from "../../redux/profile/selectors";
 import Btn from "../../UI/Btn";
 import classes from "./MypagePage.module.scss";
 
 const MypagePage = () => {
   const name = useSelector(selectName);
+  const photoURL = useSelector(selectPhotoURL);
+  const defaultColor = useSelector(selectDefaultColor);
   const description = useSelector(selectDescription);
 
   return (
     <div className={classes.container}>
       <div className={classes.profile}>
         <div className={classes.profile__content}>
-          <UserPhoto size={200} />
+          <UserPhoto
+            user={{ id: "-", name, photoURL, defaultColor }}
+            size={200}
+          />
           <span className={classes.content_span}>{name}</span>
           <p className={classes.content_p}>{description}</p>
         </div>

@@ -16,8 +16,6 @@ $chatC: #333333;
 }
 
 .textBlock {
-  width: 100%;
-  height: 100%;
   margin-left: 10px;
 
   cursor: pointer;
@@ -49,6 +47,7 @@ $chatC: #333333;
   $pfz: 14px;
   p {
     position: relative;
+    display: block;
     color: $pC;
     font-size: $pfz;
 

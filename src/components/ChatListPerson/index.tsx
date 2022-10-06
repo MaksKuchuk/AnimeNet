@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { setCompanion } from "../../redux/companion/slice";
 import { IMessagePerson } from "../../redux/messagePeople/types";
 import { useAppDispatch } from "../../redux/store";
-import ChatListPersonPhoto from "../ChatListPersonPhoto";
+import UserPhoto from "../UserPhoto";
 import classes from "./ChatListPerson.module.scss";
 
 const ChatListPerson: React.FC<IMessagePerson> = ({
@@ -24,11 +24,7 @@ const ChatListPerson: React.FC<IMessagePerson> = ({
 
   return (
     <div className={classes.container}>
-      <ChatListPersonPhoto
-        name={name}
-        defaultColor={defaultColor}
-        photoURL={photoURL}
-      />
+      <UserPhoto user={{ id: "-", name, defaultColor, photoURL }} size={55} />
       <div onClick={goToChat} className={classes.textBlock}>
         <span>{name}</span>
         <p>{lastMessage}</p>

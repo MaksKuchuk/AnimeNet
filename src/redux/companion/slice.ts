@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ICompanion } from "./types";
+import { IUser } from "../globalTypes";
 
-const initialState: ICompanion = {
+const initialState: IUser = {
   id: "",
   name: "",
   defaultColor: "#",
@@ -12,7 +12,7 @@ const companionSlice = createSlice({
   name: "companion",
   initialState,
   reducers: {
-    setCompanion(state, action: PayloadAction<ICompanion>) {
+    setCompanion(state, action: PayloadAction<IUser>) {
       state.id = action.payload.id;
       state.name = action.payload.name;
       state.defaultColor = action.payload.defaultColor;

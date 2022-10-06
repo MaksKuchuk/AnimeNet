@@ -1,21 +1,13 @@
-$size: 55px;
-
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   user-select: none;
 
-  width: $size;
-  height: $size;
   border-radius: 50%;
-  background-color: #fff;
 
-  $fz: 32px;
-  font-size: $fz;
-  span {
-    margin: auto;
-
+  .span {
     text-transform: uppercase;
     color: #fff;
   }
